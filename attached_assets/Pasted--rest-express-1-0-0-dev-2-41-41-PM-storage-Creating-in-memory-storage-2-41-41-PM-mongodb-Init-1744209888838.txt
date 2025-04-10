@@ -1,0 +1,53 @@
+> rest-express@1.0.0 dev
+2:41:41 PM [storage] Creating in-memory storage
+2:41:41 PM [mongodb] Initializing MongoDB storage
+2:41:41 PM [mongodb] MongoDB is configured and will be used for storage if connection succeeds
+2:41:41 PM [express] serving on port 5000
+2:41:41 PM [mongodb] MongoDB is configured and will be used for storage
+MongoDB connection successful, using MongoDB for sessions and data storage
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2:42:00 PM [express] GET /api/user 401 in 441ms
+2:42:05 PM [express] GET /api/user 401 in 441ms
+MongoDB: Looking up user by username/email: vinay
+[mongodb] Using cached database connection
+MongoDB query result: User not found
+MongoDB: No user record found for username: vinay
+Registering with password: vinay123
+Created hash: $2b$10$KMh3Gl6IghptZ1FHS1hvY.7cV25SqJob6a9YYe1JprKDV95UUvTzm
+[mongodb] Using cached database connection
+2:44:08 PM [express] POST /api/register 201 in 1457ms :: {"id":67,"username":"vinay","email":"vinays…
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+2:44:09 PM [express] GET /api/dashboard/stats 200 in 865ms :: {"totalLinks":0,"totalClicks":0,"activ…
+2:44:09 PM [express] GET /api/links 200 in 873ms :: []
+[mongodb] Using cached database connection
+2:44:14 PM [express] POST /api/logout 200 in 1097ms
+2:44:15 PM [express] GET /api/links 401 in 421ms :: {"message":"Unauthorized"}
+2:44:15 PM [express] GET /api/user 401 in 437ms
+2:44:15 PM [express] GET /api/dashboard/stats 401 in 440ms :: {"message":"Unauthorized"}
+Login attempt for username: vinayst04@gmail.com
+MongoDB: Looking up user by username/email: vinayst04@gmail.com
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f687b744e09147aa33b5f9',
+  username: 'vinay',
+  email: 'vinayst04@gmail.com',
+  hasPassword: true
+}
+User found: { id: '67f687b744e09147aa33b5f9', username: 'vinay' }
+Comparing passwords...
+Comparing password: vinay123 with hash: $2b$10$8K7R0YIuhirpv9aCscF.1uf8a677qYdAnuUBSR9aaVn0dgh3dxbzu
+Detailed comparison result: {
+  provided: 'vinay123',
+  hashed: '$2b$10$8K7R0YIuhirpv9aCscF.1uf8a677qYdAnuUBSR9aaVn0dgh3dxbzu',
+  isValid: false
+}
+Password comparison result: false
+Login failed: Invalid password for user - vinayst04@gmail.com
+2:44:25 PM [express] POST /api/login 401 in 725ms :: {"message":"Invalid username or password"}

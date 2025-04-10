@@ -1,0 +1,45 @@
+Error deleting link: CastError: Cast to ObjectId failed for value "67" (type string) at path "_id" for model "Link"
+    at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:251:11)
+    at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+    at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+    at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+    at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+    at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+    at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+    at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MongoDBStorage.deleteLink (/home/runner/workspace/server/db/mongodb-storage.ts:270:20)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:203:23) {
+  stringValue: '"67"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '67',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (/home/runner/workspace/node_modules/bson/src/objectid.ts:120:15)
+      at castObjectId (/home/runner/workspace/node_modules/mongoose/lib/cast/objectid.js:25:12)
+      at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:249:12)
+      at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+      at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+      at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+      at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+      at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+      at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+      at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async MongoDBStorage.deleteLink (/home/runner/workspace/server/db/mongodb-storage.ts:270:20)
+      at async <anonymous> (/home/runner/workspace/server/routes.ts:203:23),
+  valueType: 'string'
+}
+3:11:25 PM [express] DELETE /api/links/67 404 in 678ms :: {"message":"Link not found or not owned by…
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+3:11:27 PM [express] GET /api/user 304 in 658ms :: {"id":"67f68a6066920d7ae1dc6a37","username":"inte…
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+[mongodb] Using cached database connection
+3:11:28 PM [express] GET /api/dashboard/stats 304 in 882ms :: {"totalLinks":1,"totalClicks":0,"activ…
+3:11:28 PM [express] GET /api/links 304 in 889ms :: [{"id":67,"shortCode":"vinay","originalUrl":"htt…

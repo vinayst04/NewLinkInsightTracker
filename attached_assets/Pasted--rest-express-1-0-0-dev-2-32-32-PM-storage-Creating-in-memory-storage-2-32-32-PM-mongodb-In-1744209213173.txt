@@ -1,0 +1,55 @@
+
+> rest-express@1.0.0 dev
+2:32:32 PM [storage] Creating in-memory storage
+2:32:32 PM [mongodb] Initializing MongoDB storage
+2:32:32 PM [mongodb] MongoDB is configured and will be used for storage if connection succeeds
+2:32:32 PM [express] serving on port 5000
+2:32:32 PM [mongodb] MongoDB is configured and will be used for storage
+MongoDB connection successful, using MongoDB for sessions and data storage
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2:32:48 PM [express] GET /api/user 401 in 424ms
+2:32:52 PM [express] GET /api/user 401 in 432ms
+Login attempt for username: intern
+MongoDB: Looking up user by username/email: intern
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f6812ed9bb51ab9d01be05',
+  username: 'intern',
+  email: 'intern@dacoid.com',
+  hasPassword: true
+}
+User found: { id: '67f6812ed9bb51ab9d01be05', username: 'intern' }
+Comparing passwords...
+Comparing password: Test123 with hash: $2b$10$PSSNaxBBM3h7FTWIsWRIqOPms0oyPf/S0ryvBgrUIJ07gwY06Qft.
+Detailed comparison result: {
+  provided: 'Test123',
+  hashed: '$2b$10$PSSNaxBBM3h7FTWIsWRIqOPms0oyPf/S0ryvBgrUIJ07gwY06Qft.',
+  isValid: false
+}
+Password comparison result: false
+Login failed: Invalid password for user - intern
+2:33:04 PM [express] POST /api/login 401 in 751ms :: {"message":"Invalid username or password"}
+Login attempt for username: intern@dacoid.com
+MongoDB: Looking up user by username/email: intern@dacoid.com
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f6812ed9bb51ab9d01be05',
+  username: 'intern',
+  email: 'intern@dacoid.com',
+  hasPassword: true
+}
+User found: { id: '67f6812ed9bb51ab9d01be05', username: 'intern' }
+Comparing passwords...
+Comparing password: Test123 with hash: $2b$10$PSSNaxBBM3h7FTWIsWRIqOPms0oyPf/S0ryvBgrUIJ07gwY06Qft.
+Detailed comparison result: {
+  provided: 'Test123',
+  hashed: '$2b$10$PSSNaxBBM3h7FTWIsWRIqOPms0oyPf/S0ryvBgrUIJ07gwY06Qft.',
+  isValid: false
+}
+Password comparison result: false
+Login failed: Invalid password for user - intern@dacoid.com
+2:33:13 PM [express] POST /api/login 401 in 735ms :: {"message":"Invalid username or password"}

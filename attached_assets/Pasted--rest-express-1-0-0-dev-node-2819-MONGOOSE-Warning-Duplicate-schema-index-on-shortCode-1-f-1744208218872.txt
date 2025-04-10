@@ -1,0 +1,172 @@
+ rest-express@1.0.0 dev
+(node:2819) [MONGOOSE] Warning: Duplicate schema index on {"shortCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+2:11:41 PM [storage] Creating in-memory storage
+2:11:41 PM [mongodb] Initializing MongoDB storage
+2:11:41 PM [mongodb] MongoDB is configured and will be used for storage if connection succeeds
+2:11:41 PM [express] serving on port 5000
+2:11:41 PM [mongodb] MongoDB is configured and will be used for storage
+MongoDB connection successful, using MongoDB for sessions and data storage
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2:12:37 PM [express] GET /api/user 401 in 441ms
+Login attempt for username: intern@dacoid.com
+MongoDB: Looking up user by username/email: intern@dacoid.com
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f6767557b52e6937457b6d',
+  username: 'intern',
+  email: 'intern@dacoid.com',
+  hasPassword: true
+}
+User found: { id: '67f6767557b52e6937457b6d', username: 'intern' }
+Comparing passwords...
+Password comparison result: false
+Login failed: Invalid password for user - intern@dacoid.com
+2:12:48 PM [express] POST /api/login 401 in 761ms :: {"message":"Invalid username or password"}
+Login attempt for username: intern
+MongoDB: Looking up user by username/email: intern
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f6767557b52e6937457b6d',
+  username: 'intern',
+  email: 'intern@dacoid.com',
+  hasPassword: true
+}
+User found: { id: '67f6767557b52e6937457b6d', username: 'intern' }
+Comparing passwords...
+Password comparison result: false
+Login failed: Invalid password for user - intern
+2:12:59 PM [express] POST /api/login 401 in 706ms :: {"message":"Invalid username or password"}
+MongoDB: Looking up user by username/email: intern
+[mongodb] Using cached database connection
+MongoDB query result: User not found
+MongoDB: No user record found for username: intern
+[mongodb] Using cached database connection
+2:16:15 PM [express] POST /api/register 201 in 1444ms :: {"id":67,"username":"intern","email":"inter…
+[mongodb] Using cached database connection
+Error fetching user: CastError: Cast to ObjectId failed for value "67" (type number) at path "_id" for model "User"
+    at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:251:11)
+    at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+    at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+    at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+    at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+    at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+    at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+    at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+    at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20) {
+  stringValue: '"67"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 67,
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (/home/runner/workspace/node_modules/bson/src/objectid.ts:120:15)
+      at castObjectId (/home/runner/workspace/node_modules/mongoose/lib/cast/objectid.js:25:12)
+      at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:249:12)
+      at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+      at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+      at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+      at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+      at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+      at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+      at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+      at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20),
+  valueType: 'number'
+}
+[mongodb] Using cached database connection
+Error fetching user: CastError: Cast to ObjectId failed for value "67" (type number) at path "_id" for model "User"
+    at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:251:11)
+    at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+    at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+    at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+    at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+    at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+    at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+    at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+    at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20) {
+  stringValue: '"67"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 67,
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (/home/runner/workspace/node_modules/bson/src/objectid.ts:120:15)
+      at castObjectId (/home/runner/workspace/node_modules/mongoose/lib/cast/objectid.js:25:12)
+      at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:249:12)
+      at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+      at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+      at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+      at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+      at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+      at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+      at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+      at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20),
+  valueType: 'number'
+}
+[mongodb] Using cached database connection
+Error fetching user: CastError: Cast to ObjectId failed for value "67" (type number) at path "_id" for model "User"
+    at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:251:11)
+    at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+    at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+    at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+    at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+    at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+    at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+    at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+    at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20) {
+  stringValue: '"67"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 67,
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (/home/runner/workspace/node_modules/bson/src/objectid.ts:120:15)
+      at castObjectId (/home/runner/workspace/node_modules/mongoose/lib/cast/objectid.js:25:12)
+      at SchemaObjectId.cast (/home/runner/workspace/node_modules/mongoose/lib/schema/objectId.js:249:12)
+      at SchemaType.applySetters (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1255:12)
+      at SchemaType.castForQuery (/home/runner/workspace/node_modules/mongoose/lib/schemaType.js:1673:17)
+      at cast (/home/runner/workspace/node_modules/mongoose/lib/cast.js:390:32)
+      at Query.cast (/home/runner/workspace/node_modules/mongoose/lib/query.js:4907:12)
+      at Query._castConditions (/home/runner/workspace/node_modules/mongoose/lib/query.js:2325:10)
+      at model.Query._findOne (/home/runner/workspace/node_modules/mongoose/lib/query.js:2648:8)
+      at model.Query.exec (/home/runner/workspace/node_modules/mongoose/lib/query.js:4456:80)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async MongoDBStorage.getUser (/home/runner/workspace/server/db/mongodb-storage.ts:119:20)
+      at async <anonymous> (/home/runner/workspace/server/auth.ts:73:20),
+  valueType: 'number'
+}
+2:16:16 PM [express] GET /api/dashboard/stats 401 in 457ms :: {"message":"Unauthorized"}
+2:16:16 PM [express] GET /api/links 401 in 463ms :: {"message":"Unauthorized"}
+2:16:21 PM [express] POST /api/logout 200 in 880ms
+2:16:22 PM [express] GET /api/user 401 in 433ms
+2:16:22 PM [express] GET /api/dashboard/stats 401 in 442ms :: {"message":"Unauthorized"}
+2:16:22 PM [express] GET /api/links 401 in 446ms :: {"message":"Unauthorized"}
+Login attempt for username: intern@dacoid.com
+MongoDB: Looking up user by username/email: intern@dacoid.com
+[mongodb] Using cached database connection
+MongoDB query result: User found
+MongoDB: Found user: {
+  id: '67f6812ed9bb51ab9d01be05',
+  username: 'intern',
+  email: 'intern@dacoid.com',
+  hasPassword: true
+}
+User found: { id: '67f6812ed9bb51ab9d01be05', username: 'intern' }
+Comparing passwords...
+Password comparison result: false
+Login failed: Invalid password for user - intern@dacoid.com
+2:16:30 PM [express] POST /api/login 401 in 717ms :: {"message":"Invalid username or password"}

@@ -1,0 +1,64 @@
+Apr 10 20:16:10.77
+POST
+404
+new-link-insight-tracker.vercel.app
+/api/register
+Apr 10 20:11:25.50
+POST
+404
+new-link-insight-tracker.vercel.app
+/api/login
+Apr 10 20:11:16.00
+POST
+404
+new-link-insight-tracker.vercel.app
+/api/login
+MongoDB connection error: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 16122ms (connectTimeoutMS: 10000) at TLSSocket.<anonymous> (/var/task/node_modules/mongodb/lib/cmap/connect.js:287:20) at Object.onceWrapper (node:events:632:28) at TLSSocket.emit (node:events:518:28) at Socket._onTimeout (node:net:609:8) at listOnTimeout (node:internal/timers:594:17) at process.processTimers (node:internal/timers:529:7) { errorLabelSet: Set(0) {}, beforeHandshake: false, connectionGeneration: 0, [cause]: undefined }
+Apr 10 20:10:59.91
+GET
+401
+new-link-insight-tracker.vercel.app
+/api/user
+Apr 10 20:10:58.06
+GET
+200
+new-link-insight-tracker.vercel.app
+/auth
+Apr 10 20:10:57.06
+GET
+200
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/favicon.png
+Apr 10 20:10:55.32
+GET
+200
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/favicon.ico
+Using MongoDB session store Connecting to MongoDB...
+Apr 10 20:10:51.70
+GET
+500
+new-link-insight-tracker.vercel.app
+/auth
+MongoDB connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ at _handleConnectionErrors (/var/task/node_modules/mongoose/lib/connection.js:1165:11) at NativeConnection.openUri (/var/task/node_modules/mongoose/lib/connection.js:1096:11) at runNextTicks (node:internal/process/task_queues:65:5) at process.processTimers (node:internal/timers:526:9) at async connectToMongoDB (file:///var/task/api/index.js:80:5) { errorLabelSet: Set(0) {}, reason: TopologyDescription { type: 'ReplicaSetNoPrimary', servers: Map(3) { 'ac-8ffgv7h-shard-00-02.cqcswc4.mongodb.net:27017' => [ServerDescription], 'ac-8ffgv7h-shard-00-00.cqcswc4.mongodb.net:27017' => [ServerDescription], 'ac-8ffgv7h-shard-00-01.cqcswc4.mongodb.net:27017' => [ServerDescription] }, stale: false, compatible: true, heartbeatFrequencyMS: 10000, localThresholdMS: 15, setName: 'atlas-ffe49t-shard-0', maxElectionId: null, maxSetVersion: null, commonWireVersion: 0, logicalSessionTimeoutMinutes: null }, code: undefined } Unhandled Rejection: MongoServerSelectionError: Server selection timed out after 30000 ms at Topology.selectServer (/var/task/node_modules/mongodb/lib/sdam/topology.js:321:38) at runNextTicks (node:internal/process/task_queues:65:5) at listOnTimeout (node:internal/timers:555:9) at process.processTimers (node:internal/timers:529:7) at async Topology._connect (/var/task/node_modules/mongodb/lib/sdam/topology.js:200:28) at async Topology.connect (/var/task/node_modules/mongodb/lib/sdam/topology.js:152:13) at async topologyConnect (/var/task/node_modules/mongodb/lib/mongo_client.js:233:17) at async MongoClient._connect (/var/task/node_modules/mongodb/lib/mongo_client.js:246:13) at async MongoClient.connect (/var/task/node_modules/mongodb/lib/mongo_client.js:171:13) at async MongoClient.connect (/var/task/node_modules/mongodb/lib/mongo_client.js:360:16) { errorLabelSet: Set(0) {}, reason: TopologyDescription { type: 'ReplicaSetNoPrimary', servers: Map(3) { 'ac-8ffgv7h-shard-00-02.cqcswc4.mongodb.net:27017' => [ServerDescription], 'ac-8ffgv7h-shard-00-00.cqcswc4.mongodb.net:27017' => [ServerDescription], 'ac-8ffgv7h-shard-00-01.cqcswc4.mongodb.net:27017' => [ServerDescription] }, stale: false, compatible: true, heartbeatFrequencyMS: 10000, localThresholdMS: 15, setName: 'atlas-ffe49t-shard-0', maxElectionId: null, maxSetVersion: null, commonWireVersion: 0, logicalSessionTimeoutMinutes: null }, code: undefined } Node.js process exited with exit status: 128. The logs above can help with debugging the issue.
+Apr 10 20:08:15.83
+GET
+200
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/favicon.ico
+Apr 10 20:08:15.83
+GET
+401
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/api/user
+Apr 10 20:08:15.31
+GET
+200
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/favicon.ico
+Apr 10 20:08:15.30
+GET
+401
+new-link-insight-tracker-kd2jw6sl3-vinayst04s-projects.vercel.app
+/api/user
+Using MongoDB session store Connecting to MongoDB...
